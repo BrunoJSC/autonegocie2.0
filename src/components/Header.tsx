@@ -29,7 +29,7 @@ const NAV_LINKS = [
 
   {
     label: "Contato",
-    to: "contato",
+    to: "/contato",
   },
 
   {
@@ -68,7 +68,9 @@ export function Header() {
             ))}
             <DropdownMenuSeparator />
 
-            <Button className="w-full">Anunciar</Button>
+            <Button className="w-full" asChild>
+              <Link to="/anunciar">Anunciar</Link>
+            </Button>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
@@ -84,7 +86,9 @@ export function Header() {
           </Link>
         ))}
 
-        <Button className="font-bold">Anunciar</Button>
+        <Button className="font-bold" asChild>
+          <Link to="/anunciar">Anunciar</Link>
+        </Button>
       </nav>
     </header>
   );

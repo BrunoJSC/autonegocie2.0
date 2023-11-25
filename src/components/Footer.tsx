@@ -54,7 +54,7 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <Link
-                  to="/contato"
+                  to="/"
                   target="_top"
                   className="text-white hover:text-green-600 transition-colors duration-300 ease-in-out"
                 >
@@ -64,7 +64,8 @@ export function Footer() {
 
               <li>
                 <Link
-                  to="/"
+                  to="/finananciamento"
+                  target="_top"
                   className="text-white hover:text-green-600 transition-colors duration-300 ease-in-out"
                 >
                   Financiamento

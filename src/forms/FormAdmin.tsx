@@ -33,8 +33,10 @@ export function FormAdmin() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <Label>Email</Label>
-                  <Input {...field} />
+                  <Label className="text-[24px] text-black font-bold">
+                    Email
+                  </Label>
+                  <Input type="email" className="bg-[#15803D29]" {...field} />
                   <FormMessage />
                 </FormItem>
               )}
@@ -44,8 +46,14 @@ export function FormAdmin() {
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <Label>Senha</Label>
-                  <Input {...field} type="password" />
+                  <Label className="text-[24px] text-black font-bold">
+                    Senha
+                  </Label>
+                  <Input
+                    type="password"
+                    className="bg-[#15803D29]"
+                    {...field}
+                  />
                   <FormMessage />
                 </FormItem>
               )}

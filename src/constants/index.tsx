@@ -35,66 +35,79 @@ export const FEATURES = [
   },
 ];
 
-export const FOOTER_LINKS = [
+export const announce = [
   {
-    title: "Fale Conosco",
-    link: [
-      {
-        label: "(11) 3456-3427",
-        to: "/",
-      },
-      {
-        label: "(11) 94072-3891",
-        to: "/",
-      },
-      {
-        label: "autonegocie@gmail.com",
-        to: "/",
-      },
-    ],
-  },
-  {
-    title: "Institucional",
-    links: [
-      {
-        label: "Contrato",
-        to: "/",
-      },
-      {
-        label: "Financiamento",
-        to: "/",
-      },
-      {
-        label: "Anunciar meu veículo",
-        to: "/",
-      },
-    ],
-  },
-  {
-    title: "Duvídas",
-    links: [
-      {
-        label: "Regras Gerais",
-        to: "/",
-      },
-      {
-        label: "Política de Privacidade",
-        to: "/",
-      },
-      {
-        label: "Sugestão de Melhorias",
-        to: "/",
-      },
-    ],
+    title: "Ampla Audiência de Potenciais Compradores",
+    paragraph:
+      "Ao anunciar seu carro no site AutoNegocie, você terá acesso a uma ampla base de potenciais compradores interessados em adquirir veículos. Isso aumenta suas chances de encontrar um comprador rapidamente e fechar um bom negócio.",
   },
 
   {
-    title: "Administradores",
-    links: [
-      {
-        label: "Área de administração ",
-        to: "/",
-      },
-    ],
+    title: "Simplicidade e Conveniência",
+    paragraph:
+      "O site AutoNegocie tem alcance nacional, o que significa que seu anúncio será visto por pessoas de diferentes regiões do país. Isso proporciona uma maior visibilidade para o seu carro e aumenta as chances de encontrar um comprador mesmo fora da sua localidade.",
+  },
+
+  {
+    title: "Simplicidade e Conveniência",
+    paragraph:
+      "Ao utilizar o AutoNegocie, você poderá criar seu anúncio de forma rápida e simples. O processo é intuitivo e permite que você adicione fotos, descrições detalhadas e informações relevantes sobre o seu carro. Além disso, você terá acesso a ferramentas de comunicação para interagir diretamente com os interessados.",
+  },
+
+  {
+    title: "Avaliação Transparente e Equitativa",
+    paragraph:
+      "O AutoNegocie oferece ferramentas de avaliação para estimar o valor do seu carro com base em critérios de mercado. Isso proporciona uma avaliação justa e transparente, ajudando você a definir um preço adequado para o seu veículo e atrair compradores que estejam dispostos a pagar o valor justo.",
+  },
+
+  {
+    title: "Transações Seguras",
+    paragraph:
+      "O site AutoNegocie possui medidas de segurança para proteger tanto os compradores quanto os vendedores. Transações seguras e confiáveis são facilitadas por meio de mecanismos de verificação de identidade, histórico do veículo e opções de pagamento seguro, garantindo uma negociação tranquila.",
+  },
+];
+
+export const finances = [
+  {
+    title: "Parceria com os principais bancos",
+    paragraph:
+      "Através de parcerias com os principais bancos do país, oferecemos as melhores taxas de juros e condições de financiamento.",
+  },
+
+  {
+    title: "Facilidade na aprovação do crédito",
+    paragraph:
+      "Através de parcerias com os principais bancos do país, oferecemos as melhores taxas de juros e condições de financiamento.",
+  },
+
+  {
+    title: "Buscamos a melhor taxa de juros possível",
+    paragraph:
+      "Através de parcerias com os principais bancos do país, oferecemos as melhores taxas de juros e condições de financiamento.",
+  },
+
+  {
+    title: "Plano CDC (plano de desconto na antecipação de parcelas)",
+    paragraph:
+      "Através de parcerias com os principais bancos do país, oferecemos as melhores taxas de juros e condições de financiamento.",
+  },
+
+  {
+    title: "Assinatura de contrato online",
+    paragraph:
+      "Através de parcerias com os principais bancos do país, oferecemos as melhores taxas de juros e condições de financiamento.",
+  },
+
+  {
+    title: "Aprovação online",
+    paragraph:
+      "Através de parcerias com os principais bancos do país, oferecemos as melhores taxas de juros e condições de financiamento.",
+  },
+
+  {
+    title:
+      "Através de parcerias com os principais bancos do país, oferecemos as melhores taxas de juros e condições de financiamento.",
+    paragraph:
+      "Através de parcerias com os principais bancos do país, oferecemos as melhores taxas de juros e condições de financiamento.",
   },
 ];

@@ -34,3 +34,67 @@ export const FEATURES = [
     icon: <Plus color="#fff" />,
   },
 ];
+
+export const FOOTER_LINKS = [
+  {
+    title: "Fale Conosco",
+    link: [
+      {
+        label: "(11) 3456-3427",
+        to: "/",
+      },
+      {
+        label: "(11) 94072-3891",
+        to: "/",
+      },
+      {
+        label: "autonegocie@gmail.com",
+        to: "/",
+      },
+    ],
+  },
+  {
+    title: "Institucional",
+    links: [
+      {
+        label: "Contrato",
+        to: "/",
+      },
+      {
+        label: "Financiamento",
+        to: "/",
+      },
+      {
+        label: "Anunciar meu veículo",
+        to: "/",
+      },
+    ],
+  },
+  {
+    title: "Duvídas",
+    links: [
+      {
+        label: "Regras Gerais",
+        to: "/",
+      },
+      {
+        label: "Política de Privacidade",
+        to: "/",
+      },
+      {
+        label: "Sugestão de Melhorias",
+        to: "/",
+      },
+    ],
+  },
+
+  {
+    title: "Administradores",
+    links: [
+      {
+        label: "Área de administração ",
+        to: "/",
+      },
+    ],
+  },
+];

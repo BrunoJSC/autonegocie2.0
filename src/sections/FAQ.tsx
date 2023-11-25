@@ -7,7 +7,7 @@ export function FAQ() {
         Perguntas Frequentes sobre a plataforma
       </h2>
 
-      <div className="container mx-auto max-w-[937px]">
+      <div className="container mx-auto max-w-[937px] border-b">
         <Summary
           title="1. Quais são os horários de funcionamento da  concessionária?"
           text="Nossos atendentes estão disponíveis 24 horas por dia, 7 dias por semana."

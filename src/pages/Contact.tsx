@@ -1,20 +1,18 @@
 import { Banner } from "@/components/Banner";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { FormContact } from "@/forms/FormContact";
 import { Main } from "@/layout/Main";
-import { FAQ } from "@/sections/FAQ";
-import { Feature } from "@/sections/Feature";
 
-export function Home() {
+export function Contact() {
   return (
     <>
       <Header />
-      <Banner image={"../src/assets/banner.png"} visible />
+      <Banner image={"../src/assets/banner2.png"} />
       <Main>
-        <Feature />
-        <FAQ />
-        <Footer />
+        <FormContact />
       </Main>
+      <Footer />
     </>
   );
 }

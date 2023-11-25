@@ -4,12 +4,12 @@ import { FEATURES } from "@/constants";
 export function Feature() {
   return (
     <section className="w-full">
-      <div className="container mx-auto max-w-[937px] text-center p-4 border-b mt-24">
+      <div className="container mx-auto max-w-[937px] text-center p-4 border-b mt-12">
         <div
           className="max-w-[937px] text-center mx-auto 
         "
         >
-          <h2 className="text-[38px] md:text-[28px] text-xs font-bold text-black leading-[48px]">
+          <h2 className="text-[38px] text-black font-bold text-center">
             A melhor plataforma de negociação de veículos
           </h2>
           <p className="md:text-[16px] text-[14px] text-[#848484]">

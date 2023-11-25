@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
-    <footer className="w-full md:h-[463px] h-full bg-[#1E1E1E] mt-12 flex flex-col items-center justify-center ">
-      <div className="container mx-auto py-2">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
+    <footer className="w-full bg-[#1E1E1E] mt-12 py-8 md:py-12 flex flex-col items-center">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
           <div>
             <h3 className="text-white font-bold text-[32px]">Fale Conosco</h3>
             <ul className="flex flex-col gap-3">
@@ -54,7 +54,8 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <Link
-                  to="/"
+                  to="/contato"
+                  target="_top"
                   className="text-white hover:text-green-600 transition-colors duration-300 ease-in-out"
                 >
                   Contrato
@@ -120,7 +121,8 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <Link
-                  to="/"
+                  to="/admin"
+                  target="_top"
                   className="text-white hover:text-green-600 transition-colors duration-300 ease-in-out"
                 >
                   Área de administração

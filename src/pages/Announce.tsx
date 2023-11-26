@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { announce } from "@/constants";
 import { Main } from "@/layout/Main";
+import { Link } from "react-router-dom";
 
 export function Announce() {
   return (
@@ -38,8 +39,8 @@ export function Announce() {
                 <img src={carSVG} alt="car" className="w-full h-full" />
               </div>
             </div>
-            <Button className=" mt-10 md:w-[472px] w-full mx-auto">
-              Quer saber mais?
+            <Button className=" mt-10 md:w-[472px] w-full mx-auto" asChild>
+              <Link to="/formularios">Anuncie Agora</Link>
             </Button>
           </div>
         </section>

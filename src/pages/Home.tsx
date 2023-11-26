@@ -9,6 +9,7 @@ export function Home() {
   return (
     <>
       <Header />
+
       <Banner image={"../src/assets/banner.png"} visible />
       <Main>
         <Feature />

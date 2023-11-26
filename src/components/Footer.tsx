@@ -50,40 +50,6 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-bold text-[32px]">Institucional</h3>
-            <ul className="flex flex-col gap-3">
-              <li>
-                <Link
-                  to="/"
-                  target="_top"
-                  className="text-white hover:text-green-600 transition-colors duration-300 ease-in-out"
-                >
-                  Contrato
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to="/finananciamento"
-                  target="_top"
-                  className="text-white hover:text-green-600 transition-colors duration-300 ease-in-out"
-                >
-                  Financiamento
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to="/"
-                  className="text-white hover:text-green-600 transition-colors duration-300 ease-in-out"
-                >
-                  Anunciar meu veículo
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
             <h3 className="text-white font-bold text-[32px]">Duvídas</h3>
             <ul className="flex flex-col gap-3">
               <li>

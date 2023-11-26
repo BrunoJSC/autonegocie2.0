@@ -4,6 +4,7 @@ import { Admin } from "./pages/Admin";
 import { Announce } from "./pages/Announce";
 import { Contact } from "./pages/Contact";
 import { Finance } from "./pages/Finance";
+import { Forms } from "./pages/Forms";
 import { Home } from "./pages/Home";
 import PublicRoute from "./routes/PublicRoute";
 
@@ -53,6 +54,15 @@ function App() {
           element={
             <PublicRoute>
               <Finance />
+            </PublicRoute>
+          }
+        />
+
+        <Route
+          path="/formularios"
+          element={
+            <PublicRoute>
+              <Forms />
             </PublicRoute>
           }
         />

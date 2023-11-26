@@ -9,7 +9,9 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { db } from "@/firebase";
 import { contactSchema } from "@/validation/schemas";
+import { addDoc, collection } from "firebase/firestore";
 import { MessageSquare } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -23,7 +25,12 @@ export function FormContact() {
     },
   });
 
-  const handleSubmit = (data: z.infer<typeof contactSchema>) => {
+  const handleSubmit = async (data: z.infer<typeof contactSchema>) => {
+    await addDoc(collection(db, "contact"), {
+      name: data.name,
+      email: data.email,
+      message: data.message,
+    });
     console.log(data);
   };
 

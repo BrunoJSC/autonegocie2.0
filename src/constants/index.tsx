@@ -54,7 +54,7 @@ export const LinksDashboard = [
   },
   {
     title: "Emails",
-    href: "/email",
+    href: "/dashboard/emails",
   },
 ];
 

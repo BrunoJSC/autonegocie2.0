@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
+import { Emails } from "./admin/pages/Emails";
 import { ListContact } from "./admin/pages/ListContact";
 import { AuthProvider } from "./context/auth";
 import { Admin } from "./pages/Admin";
@@ -85,6 +86,15 @@ function App() {
             element={
               <PrivateRoute>
                 <ListContact />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/dashboard/emails"
+            element={
+              <PrivateRoute>
+                <Emails />
               </PrivateRoute>
             }
           />

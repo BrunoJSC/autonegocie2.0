@@ -14,6 +14,7 @@ import { contactSchema } from "@/validation/schemas";
 import { addDoc, collection } from "firebase/firestore";
 import { MessageSquare } from "lucide-react";
 import { useForm } from "react-hook-form";
+import { v4 as uuidv4 } from "uuid";
 import { z } from "zod";
 
 export function FormContact() {
@@ -27,10 +28,13 @@ export function FormContact() {
 
   const handleSubmit = async (data: z.infer<typeof contactSchema>) => {
     await addDoc(collection(db, "contact"), {
+      id: uuidv4(),
       name: data.name,
       email: data.email,
       message: data.message,
     });
+
+    form.reset();
     console.log(data);
   };
 
@@ -110,7 +114,11 @@ export function FormContact() {
                 )}
               />
 
-              <Button className="w-full mt-4" type="submit">
+              <Button
+                className="w-full mt-4"
+                type="submit"
+                disabled={form.formState.isSubmitting}
+              >
                 Enviar
               </Button>
             </form>

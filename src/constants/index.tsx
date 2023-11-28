@@ -35,6 +35,29 @@ export const FEATURES = [
   },
 ];
 
+export const LinksDashboard = [
+  {
+    title: "Inicio",
+    href: "/",
+  },
+  {
+    title: "Criar Carro",
+    href: "/cirar-carro",
+  },
+  {
+    title: "Criar Moto",
+    href: "/criar-moto",
+  },
+  {
+    title: "Contatos",
+    href: "/dashboard/contatos",
+  },
+  {
+    title: "Emails",
+    href: "/email",
+  },
+];
+
 export const announce = [
   {
     title: "Ampla Audiência de Potenciais Compradores",

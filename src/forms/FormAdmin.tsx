@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Form, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Progress } from "@/components/ui/progress";
+import { auth } from "@/firebase";
 import { adminSchema } from "@/validation/schemas";
 import { Label } from "@radix-ui/react-dropdown-menu";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import iconForm from "../assets/iconForm.png";
@@ -15,7 +18,9 @@ export function FormAdmin() {
     },
   });
 
-  const handleSubmit = (data: z.infer<typeof adminSchema>) => {
+  const handleSubmit = async (data: z.infer<typeof adminSchema>) => {
+    signInWithEmailAndPassword(auth, data.email, data.password);
+
     console.log(data);
   };
 
@@ -59,7 +64,14 @@ export function FormAdmin() {
               )}
             />
             <Button type="submit" className="w-full">
-              Entrar
+              {form.formState.isSubmitting ? (
+                <Progress
+                  value={form.formState.isLoading ? 100 : 0}
+                  className="w-full"
+                />
+              ) : (
+                "Entrar"
+              )}
             </Button>
           </form>
         </Form>

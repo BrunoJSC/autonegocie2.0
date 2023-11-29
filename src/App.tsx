@@ -5,8 +5,10 @@ import { ListContact } from "./admin/pages/ListContact";
 import { AuthProvider } from "./context/auth";
 import { Admin } from "./pages/Admin";
 import { Announce } from "./pages/Announce";
+import { Car } from "./pages/Car";
 import { Contact } from "./pages/Contact";
 import { Dashboard } from "./pages/Dashboard";
+import { DetailsCar } from "./pages/DetailsCar";
 import { Finance } from "./pages/Finance";
 import { Forms } from "./pages/Forms";
 import { Home } from "./pages/Home";
@@ -68,6 +70,24 @@ function App() {
           element={
             <PublicRoute>
               <Forms />
+            </PublicRoute>
+          }
+        />
+
+        <Route
+          path="/carros"
+          element={
+            <PublicRoute>
+              <Car />
+            </PublicRoute>
+          }
+        />
+
+        <Route
+          path="/carros/detalhes/:id"
+          element={
+            <PublicRoute>
+              <DetailsCar />
             </PublicRoute>
           }
         />

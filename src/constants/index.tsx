@@ -134,3 +134,22 @@ export const finances = [
       "Através de parcerias com os principais bancos do país, oferecemos as melhores taxas de juros e condições de financiamento.",
   },
 ];
+
+export const years = [
+  "2015",
+  "2016",
+  "2017",
+  "2018",
+  "2019",
+  "2020",
+  "2021",
+  "2022",
+  "2023",
+  "2024",
+  "2025",
+  "2026",
+  "2027",
+  "2028",
+  "2029",
+  "2030",
+];

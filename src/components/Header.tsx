@@ -14,17 +14,17 @@ import { Button } from "./ui/button";
 const NAV_LINKS = [
   {
     label: "Carros",
-    to: "carros",
+    to: "/carros",
   },
 
   {
     label: "Motos",
-    to: "motos",
+    to: "/motos",
   },
 
   {
     label: "Loja",
-    to: "loja",
+    to: "/loja",
   },
 
   {
@@ -33,8 +33,8 @@ const NAV_LINKS = [
   },
 
   {
-    label: "Ofcinas do Dicas",
-    to: "oficinas",
+    label: "Oficinas do Dicas",
+    to: "/oficinas",
   },
 ];
 

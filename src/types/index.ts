@@ -29,3 +29,25 @@ export interface ICar {
   description: string;
   images: string[];
 }
+
+export interface IMotorbike {
+  id: string;
+  name: string;
+  email: string;
+  fip: string;
+  phone: string;
+  location: string;
+  motorbikeBrand: string;
+  motorbikeModel: string;
+  mechanic: string;
+  plate: string;
+  auction: string;
+  yearFabrication: string;
+  yearModification: string;
+  color: string;
+  fuel: string;
+  km: string;
+  price: string;
+  description: string;
+  images: string[];
+}

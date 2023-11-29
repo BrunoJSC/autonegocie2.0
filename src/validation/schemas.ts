@@ -108,3 +108,15 @@ export const motorbikeSchema = z.object({
       "Only .jpg, .jpeg, .png and .webp formats are supported."
     ),
 });
+
+export const searchSchema = z.object({
+  searchBrand: z.string(),
+  searchModel: z.string(),
+  minPrice: z.string().optional(),
+  maxPrice: z.string().optional(),
+  minYear: z.string().optional(),
+  maxYear: z.string().optional(),
+  searchAccessories: z.string().optional(),
+  minKm: z.string().optional(),
+  maxKm: z.string().optional(),
+});

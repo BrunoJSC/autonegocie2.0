@@ -171,7 +171,7 @@ export function Motorbike() {
                   key={motorbike.id}
                   state={{ data: motorbike }}
                 >
-                  <MotorbikeCard motorbike={motorbike} />
+                  <MotorbikeCard motorbike={motorbike} key={motorbike.id} />
                 </Link>
               ))}
             </div>

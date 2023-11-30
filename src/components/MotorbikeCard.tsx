@@ -1,8 +1,8 @@
-import { ICar } from "@/types";
+import { IMotorbike } from "@/types";
 import { Card } from "./ui/card";
 
-interface CarProps {
-  car: ICar;
+interface MotorbikeProps {
+  motorbike: IMotorbike;
 }
 
 const formatPrice = (price: string) => {
@@ -15,12 +15,12 @@ const formatPrice = (price: string) => {
   }).format(price);
 };
 
-export const CarCard = ({ car }: CarProps) => {
+export const MotorbikeCard = ({ motorbike }: MotorbikeProps) => {
   return (
     <Card className="bg-white rounded-md overflow-hidden shadow-lg flex flex-col md:flex-row mb-4">
       <div className="relative md:w-64 md:h-48 w-full h-72 overflow-hidden">
-        {car.images && car.images.length > 0 ? (
-          car.images.map((image: string, index: number) => (
+        {motorbike.images && motorbike.images.length > 0 ? (
+          motorbike.images.map((image: string, index: number) => (
             <img
               key={index}
               src={image}
@@ -36,14 +36,18 @@ export const CarCard = ({ car }: CarProps) => {
       </div>
 
       <div className="p-4">
-        <h2 className="text-xl font-semibold mb-2">{car.brandCar}</h2>
-        <p className="text-sm text-gray-500 mb-2">Ano: {car.yearFabrication}</p>
+        <h2 className="text-xl font-semibold mb-2">
+          {motorbike.motorbikeBrand}
+        </h2>
         <p className="text-sm text-gray-500 mb-2">
-          Tipo de combustível: {car.fuel}
+          Ano: {motorbike.yearFabrication}
+        </p>
+        <p className="text-sm text-gray-500 mb-2">
+          Tipo de combustível: {motorbike.fuel}
         </p>
         <div className="flex justify-between items-center p-2 bg-green-500 rounded-md">
           <p className="text-lg font-bold text-white">
-            {formatPrice(car.price)}
+            {formatPrice(motorbike.price)}
           </p>
         </div>
       </div>

@@ -42,7 +42,7 @@ export const LinksDashboard = [
   },
   {
     title: "Criar Carro",
-    href: "/cirar-carro",
+    href: "/dashboard/cirar-carro",
   },
   {
     title: "Criar Moto",

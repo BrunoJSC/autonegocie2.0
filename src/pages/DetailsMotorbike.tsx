@@ -20,7 +20,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { db } from "@/firebase";
 import { Main } from "@/layout/Main";
-import { ICar } from "@/types";
+import { IMotorbike } from "@/types";
 import { contactSchema } from "@/validation/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { addDoc, collection } from "firebase/firestore";
@@ -29,7 +29,7 @@ import { useLocation } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { z } from "zod";
 
-export function DetailsCar() {
+export function DetailsMotorbike() {
   const location = useLocation();
 
   const form = useForm<z.infer<typeof contactSchema>>({
@@ -41,8 +41,8 @@ export function DetailsCar() {
     },
   });
 
-  const state = location.state as { data: ICar };
-  const car = state?.data;
+  const state = location.state as { data: IMotorbike };
+  const motorbike = state?.data;
 
   const handleSubmit = async (data: z.infer<typeof contactSchema>) => {
     await addDoc(collection(db, "contact"), {
@@ -64,8 +64,8 @@ export function DetailsCar() {
           <div className="w-full max-w-screen-xl mx-auto">
             <div className="w-full aspect-w-16 aspect-h-9">
               <AspectRatio ratio={16 / 9}>
-                {car.images && car.images.length > 0 ? (
-                  car.images.map((image: string, index: number) => (
+                {motorbike.images && motorbike.images.length > 0 ? (
+                  motorbike.images.map((image: string, index: number) => (
                     <img
                       key={index}
                       src={image}
@@ -85,50 +85,61 @@ export function DetailsCar() {
               <div>
                 <CardHeader>
                   <CardTitle className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#282828]">
-                    {car.brandCar}
-                    <span className="text-green-500"> {car.modelCar}</span>
+                    {motorbike.motorbikeBrand}
+                    <span className="text-green-500">
+                      {" "}
+                      {motorbike.motorbikeModel}
+                    </span>
                   </CardTitle>
-                  <CardDescription>{car.yearFabrication}</CardDescription>
+                  <CardDescription>{motorbike.yearFabrication}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <p className="font-bold">Cidade</p>
-                      <p className="text-green-500 font-bold">{car.location}</p>
+                      <p className="text-green-500 font-bold">
+                        {motorbike.location}
+                      </p>
                     </div>
 
                     <div>
                       <p className="font-bold">KM</p>
-                      <p className="text-green-500 font-bold">{car.km}</p>
+                      <p className="text-green-500 font-bold">{motorbike.km}</p>
                     </div>
 
                     <div>
                       <p className="font-bold">Ano</p>
                       <div className="flex gap-2">
                         <p className="text-green-500 font-bold">
-                          {car.yearFabrication}
+                          {motorbike.yearFabrication}
                         </p>
                         -
                         <p className="text-green-500 font-bold">
-                          {car.yearModification}
+                          {motorbike.yearModification}
                         </p>
                       </div>
                     </div>
 
                     <div>
                       <p className="font-bold">Combustível</p>
-                      <p className="text-green-500 font-bold">{car.fuel}</p>
+                      <p className="text-green-500 font-bold">
+                        {motorbike.fuel}
+                      </p>
                     </div>
 
                     <div>
                       <p className="font-bold">Cor</p>
-                      <p className="text-green-500 font-bold">{car.color}</p>
+                      <p className="text-green-500 font-bold">
+                        {motorbike.color}
+                      </p>
                     </div>
                   </div>
 
                   <div>
                     <p className="font-bold">Descricão</p>
-                    <p className="text-gray-500 font-bold">{car.description}</p>
+                    <p className="text-gray-500 font-bold">
+                      {motorbike.description}
+                    </p>
                   </div>
 
                   {/* <div>
@@ -145,7 +156,7 @@ export function DetailsCar() {
 
               <div className="w-full md:w-96 ">
                 <div className="p-4 bg-green-500  rounded-md">
-                  <p className="text-white font-bold">R${car.price}</p>
+                  <p className="text-white font-bold">R${motorbike.price}</p>
                 </div>
                 <Form {...form}>
                   <div className="mt-5 mb-5">

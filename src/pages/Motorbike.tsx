@@ -1,20 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { CarCard } from "@/components/CarCard";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { MotorbikeCard } from "@/components/MotorbikeCard";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { db } from "@/firebase";
 import { Main } from "@/layout/Main";
-import { ICar } from "@/types";
+import { IMotorbike } from "@/types";
 import { collection, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-export function Car() {
-  const [car, setCar] = useState<ICar[]>([]);
-  const [filteredCars, setFilteredCars] = useState<ICar[]>([]);
+export function Motorbike() {
+  const [motorbike, setMotorbike] = useState<IMotorbike[]>([]);
+  const [filteredMotorbikes, setFilteredMotorbikes] = useState<IMotorbike[]>(
+    []
+  );
 
   const [searchBrand, setSearchBrand] = useState("");
   const [searchModel, setSearchModel] = useState("");
@@ -40,28 +42,28 @@ export function Car() {
       return;
     }
 
-    const newFilteredCars = car.filter((car) => {
-      const brand = car.brandCar
+    const newFilteredCars = motorbike.filter((motorbike) => {
+      const brand = motorbike.motorbikeBrand
         ?.toLowerCase()
         .includes(searchBrand.toLowerCase());
 
-      const model = car.modelCar
+      const model = motorbike.motorbikeModel
         ?.toLowerCase()
         .includes(searchModel.toLowerCase());
 
-      const year = car.yearFabrication
+      const year = motorbike.yearFabrication
         ?.toLowerCase()
         .includes(searchYear.toLowerCase());
 
       const isMinPriceValid =
-        typeof car.price === "string" &&
-        parseFloat(car.price) >= parseFloat(minPrice);
+        typeof motorbike.price === "string" &&
+        parseFloat(motorbike.price) >= parseFloat(minPrice);
 
       const isMaxPriceValid =
-        typeof car.price === "string" &&
-        parseFloat(car.price) <= parseFloat(maxPrice);
+        typeof motorbike.price === "string" &&
+        parseFloat(motorbike.price) <= parseFloat(maxPrice);
 
-      const fuel = (car.fuel || "")
+      const fuel = (motorbike.fuel || "")
         .toLowerCase()
         .includes(searchFuel.toLowerCase());
 
@@ -70,19 +72,19 @@ export function Car() {
       );
     });
 
-    setFilteredCars(newFilteredCars);
+    setFilteredMotorbikes(newFilteredCars);
   };
 
   useEffect(() => {
-    const unsubscribe = onSnapshot(collection(db, "cars"), (snapshot) => {
+    const unsubscribe = onSnapshot(collection(db, "bikes"), (snapshot) => {
       const data = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
-      })) as ICar[];
-      setCar(data);
+      })) as IMotorbike[];
+      setMotorbike(data);
 
       if (!searchBrand && !searchModel) {
-        setFilteredCars(data);
+        setFilteredMotorbikes(data);
       }
     });
     return () => {
@@ -163,13 +165,13 @@ export function Car() {
             </Card>
 
             <div className="w-full p-4  flex-1">
-              {filteredCars.map((car) => (
+              {filteredMotorbikes.map((motorbike) => (
                 <Link
-                  to={`/carros/detalhes/${car.id}`}
-                  key={car.id}
-                  state={{ data: car }}
+                  to={`/motos/detalhes/${motorbike.id}`}
+                  key={motorbike.id}
+                  state={{ data: motorbike }}
                 >
-                  <CarCard car={car} />
+                  <MotorbikeCard motorbike={motorbike} />
                 </Link>
               ))}
             </div>

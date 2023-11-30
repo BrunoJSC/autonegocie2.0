@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
+import { CreateCar } from "./admin/pages/CreateCar";
 import { Emails } from "./admin/pages/Emails";
 import { ListContact } from "./admin/pages/ListContact";
 import { AuthProvider } from "./context/auth";
@@ -12,6 +13,7 @@ import { DetailsCar } from "./pages/DetailsCar";
 import { Finance } from "./pages/Finance";
 import { Forms } from "./pages/Forms";
 import { Home } from "./pages/Home";
+import { Motorbike } from "./pages/Motorbike";
 import PrivateRoute from "./routes/PrivateRoute";
 import PublicRoute from "./routes/PublicRoute";
 
@@ -75,6 +77,15 @@ function App() {
         />
 
         <Route
+          path="/motos"
+          element={
+            <PublicRoute>
+              <Motorbike />
+            </PublicRoute>
+          }
+        />
+
+        <Route
           path="/carros"
           element={
             <PublicRoute>
@@ -85,6 +96,15 @@ function App() {
 
         <Route
           path="/carros/detalhes/:id"
+          element={
+            <PublicRoute>
+              <DetailsCar />
+            </PublicRoute>
+          }
+        />
+
+        <Route
+          path="/motos/detalhes/:id"
           element={
             <PublicRoute>
               <DetailsCar />
@@ -115,6 +135,15 @@ function App() {
             element={
               <PrivateRoute>
                 <Emails />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/dashboard/cirar-carro"
+            element={
+              <PrivateRoute>
+                <CreateCar />
               </PrivateRoute>
             }
           />
